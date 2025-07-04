@@ -1,6 +1,6 @@
 /* Set the background color of the whole page to black (#1A1A1A) */
 body {
-  background-color: #1A1A1A;
+  background-color: #241c24;
   margin: 0;
   padding: 0;
 }
@@ -11,9 +11,9 @@ body {
   width: 100vw;      /* Make the section as wide as the viewport */
   height: 100vh;     /* Make the section as tall as the viewport */
   overflow: hidden;
-  margin-top: 20px; /* Add a little space at the top */
+  margin-top: 20px;    /* Space at the top */
+  margin-bottom: 20px; /* Add same space at the bottom */
   margin-right: 0;
-  margin-bottom: 0;
   margin-left: 0;
   padding: 0;
 }
@@ -44,16 +44,20 @@ body {
 /* The box around the headline and paragraph */
 .headline-box {
   background-color: #FFF9E5; /* Light yellow background */
-  /* Remove border radius for a square look */
   border-radius: 0;
-  padding: 30px 35px; /* More padding for a bigger box */
-  margin: 0; /* Remove margin */
-  box-shadow: none; /* No shadow for a flat look */
+  padding: 30px 35px;
+  margin: 0;
+  box-shadow: none;
+  /* Center everything inside the box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Style for the headline text */
 .headline-box h1 {
-  font-size: 36px; /* Make the headline bigger */
+  font-style: Proxima Nova;
+  font-size: 60px; /* Make the headline bigger */
   color: #77A8BB;  /* Light blue color */
   margin: 0 0 15px 0; /* Space below the headline */
   font-weight: normal;
@@ -61,7 +65,8 @@ body {
 
 /* Style for the paragraph inside the headline box */
 .headline-box p {
-  font-size: 16px;
+  font-style: Avenir;
+  font-size: 25px;
   line-height: 1.5;
   color: #77A8BB; /* Light blue color for the paragraph */
   margin: 0 0 25px 0; /* Space below the paragraph */
@@ -86,4 +91,13 @@ body {
 
 .cta-btn:hover {
   background-color: #0055a5; /* Slightly lighter blue on hover */
+}
+
+/* Add spacing above the logo to center it in the top border */
+.logo {
+  display: block;
+  margin-top: 10px;   /* Push the logo down a bit */
+  margin-bottom: 10px; /* Optional: add space below for symmetry */
+  margin-left: 20px;  /* Optional: add space from the left edge */
+  height: 48px;       /* Set a good height for the logo */
 }
